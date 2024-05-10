@@ -25,14 +25,6 @@ public class MatchingDAO {
 		this.conn = DBUtil.open();
 	}
 
-	public void close() {
-		try {
-			this.conn.close();
-		} catch (Exception e) {
-			System.out.println("MatchingDAO.close 오류");
-			e.printStackTrace();
-		}
-	}
 
 	public HashMap<Integer, String> getColumn(String id) {
 

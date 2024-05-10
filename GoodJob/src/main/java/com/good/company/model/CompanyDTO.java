@@ -59,11 +59,6 @@ public class CompanyDTO {
 	
 	//기업 리뷰평점
 	private String review_avg;
-	private String wel_avg;
-	private String stab_avg;
-	private String sal_avg;
-	private String cul_avg;
-	private String pot_avg;
 	
 
 }

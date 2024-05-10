@@ -12,35 +12,9 @@
 .space-evenly {
 	justify-content: space-evenly;
 }
-
 .matchplus {
 	min-height: 200px;
-	align-content: center;
-}
-
-#top3card>div:nth-child(2) {
-	border-left-width: 1px;
-	border-right-width: 1px;
-	border-color: rgb(235, 235, 235);
-}
-
-.contents_item_row {
-	display: flex;
-	justify-content: flex-start;
-}
-
-#matchscore {
-	margin-left: 35px;
-	line-height: 2rem;
-}
-
-.contents_item_label {
-	width: 68%;
-}
-#matchtotal {
-	justify-content: center;
-    gap: 26%;
-    margin-bottom: 5px;
+    align-content: center;
 }
 </style>
 </head>
@@ -53,27 +27,37 @@
 					<h1 class="my-3 gradiTitle">
 						<span>IT's Good Job for U</span>
 					</h1>
-					<p class="mt-6">굿잡forU 추천은 고객님의 성향 조사를 기반으로, 매칭을 해드립니다.</p>
 				</div>
-				<div id="matchinfo" class="mt-4">
-					<h3>'${name}'님의 성향 :</h3>
-					<h5>"${keywords.best}${keywords.worst} 사람!"</h5>
+				<div id="matchinfo">
+					<div class="cpsChart">
+						<canvas id="cpSugradarChart" width="300" height="300"></canvas>
+					</div>
+
+					<div class="cpsContent pt-4">
+						<div class="cpsMember">
+							<h3>${name}님의 성향</h3>
+							<div class="job_meta">
+								<span class="job-keyword">사람중심</span> <span class="job-keyword">돈보다
+									성장</span>
+							</div>
+							<p>결국 일도 '사람'이 모여서 하는 것!</p>
+						</div>
+					</div>
 				</div>
 				<div>
-					<div class="border-b border-border py-8 mt-6 mb-8">
+					<div class="border-y border-border py-8 mt-6 mb-8">
 						<div class="cpsCompanyList">
-							<h3 class="pl-6">매칭 기업 Top3</h3>
+							<h3 class="pl-8">매칭 기업 Top3 for U!</h3>
 							<div class="cpsCompanyInfo">
-								<div
-									class="row mt-8 integration-tab-items rounded-xl bg-white shadow-lg ml-4 mr-4"
-									id="top3card">
+								<div class="row mt-8 integration-tab-items">
 
 									<c:forEach var="companyDTO" items="${top3}" varStatus="status">
-										<div class="my-8 md:col-6 lg:col-4 integration-tab-item px-6"
+										<div class="mb-8 md:col-6 lg:col-4 integration-tab-item"
 											data-groups='["social"]'>
-											<div class="pb-8 min-h-400">
+											<div
+												class="rounded-xl bg-white px-8 py-8 shadow-lg min-h-400">
 												<div
-													class="pb-5 integration-card-head flex items-center space-x-4 min-h-[105px]">
+													class="pb-5 integration-card-head flex items-center space-x-4 border-b border-border min-h-[105px]">
 													<img src="${companyDTO.dto.image}" alt="" />
 													<div>
 														<h5 class="h5">${companyDTO.dto.cp_name}</h5>
@@ -83,63 +67,16 @@
 												<div class="my-5 py-5 smallradarChart">
 													<canvas id="cp${status.index + 1}SugradarChart"></canvas>
 												</div>
-												<div class="my-5 py-5 flex space-evenly pl-4 border-border border-b">
+												<div
+													class="my-5 py-5 border-y border-border flex space-evenly">
 													<div>
 														<span
 															class="bg-gradient inline-flex h-16 w-16 items-center justify-center rounded-full">
 															${companyDTO.matchScore}% </span>
 													</div>
-													<span class="m-auto">"${companyDTO.matchText}"
+													<span class="m-auto">"여기다.<br> ${name}님이 갈 곳!"
 													</span>
 
-												</div>
-												<div class="mb-5 pb-5">
-													<div class="flex" id="matchtotal">
-														<h4>리뷰 평점</h4><h4><i
-																	class="fa-solid fa-star cornflowerblue"></i> ${companyDTO.dto.review_avg}</h4>
-													</div>
-													<div id="matchscore">
-														<div class="contents_item_row">
-															<div class="contents_item_label">연봉</div>
-															<div class="avg_wrap">
-																<span class="avg_icon color_or_400"><i
-																	class="fa-solid fa-star gold"></i></span> <span
-																	class="avg_text"> ${companyDTO.dto.sal_avg}</span>
-															</div>
-														</div>
-														<div class="contents_item_row">
-															<div class="contents_item_label">조직문화</div>
-															<div class="avg_wrap">
-																<span class="avg_icon color_or_400"><i
-																	class="fa-solid fa-star gold"></i></span> <span
-																	class="avg_text"> ${companyDTO.dto.cul_avg}</span>
-															</div>
-														</div>
-														<div class="contents_item_row">
-															<div class="contents_item_label">복지</div>
-															<div class="avg_wrap">
-																<span class="avg_icon color_or_400"><i
-																	class="fa-solid fa-star gold"></i></span> <span
-																	class="avg_text"> ${companyDTO.dto.wel_avg}</span>
-															</div>
-														</div>
-														<div class="contents_item_row">
-															<div class="contents_item_label">성장 가능성</div>
-															<div class="avg_wrap">
-																<span class="avg_icon color_or_400"><i
-																	class="fa-solid fa-star gold"></i></span> <span
-																	class="avg_text"> ${companyDTO.dto.pot_avg}</span>
-															</div>
-														</div>
-														<div class="contents_item_row">
-															<div class="contents_item_label">조직 안정성</div>
-															<div class="avg_wrap">
-																<span class="avg_icon color_or_400"><i
-																	class="fa-solid fa-star gold"></i></span> <span
-																	class="avg_text"> ${companyDTO.dto.stab_avg}</span>
-															</div>
-														</div>
-													</div>
 												</div>
 												<div class="job_meta">
 
@@ -161,13 +98,12 @@
 				</div>
 
 				<div class="cpsCompany">
-					<h3 class="pl-6">아쉽게 순위에 들지 못한 기업</h3>
+					<h3 class="pl-8">매칭률 높은 기업 더 보기</h3>
 					<div class="row mt-8 cpsCompanyInfo">
 
 						<c:forEach items="${list}" var="list">
 							<div class="mb-8 sm:col-6 lg:col-4">
-								<div
-									class="rounded-xl bg-white p-6 shadow-lg lg:p-match matchplus">
+								<div class="rounded-xl bg-white p-6 shadow-lg lg:p-match matchplus">
 									<div class="integration-card-head flex items-center space-x-4">
 										<img src="${list.dto.image}" alt="">
 										<div>
@@ -201,6 +137,32 @@
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.4.1/chart.min.js"></script>
 	<script>
+		var ctx = document.getElementById('cpSugradarChart').getContext('2d');
+		var myRadarChart = new Chart(ctx, {
+			type : 'radar',
+			data : {
+				label: '회원',
+				labels : [ '성장 가능성', '연봉', '조직문화', '조직안정성', '복지' ],
+				datasets : [ {
+					data : [${dto.potential}, ${dto.salary}, ${dto.culture}, ${dto.stability}, ${dto.welfare} ], // 새로운 데이터셋의 데이터
+					backgroundColor : 'rgba(54, 162, 235, 0.2)', // fill color
+					borderColor : 'rgba(54, 162, 235, 1)', // border color
+					borderWidth : 1
+				} ]
+			},
+			options : {
+				scales : {
+					r : {
+						min : 0,
+						max : 100,
+						ticks : {
+							stepSize : 20
+						}
+					}
+				}
+			}
+		});
+
 		<c:forEach var="companyDTO" items="${top3}" varStatus="status">
 	    var ctx = document.getElementById('cp${status.index + 1}SugradarChart').getContext('2d');
 	    var myRadarChart = new Chart(ctx, {

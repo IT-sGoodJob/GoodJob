@@ -6,15 +6,7 @@
 #matchinfo {
 	display: flex;
 	justify-content: space-evenly;
-	width: 80%;
-	margin: 1rem auto;
-	align-items: center;
-	border-bottom: 2px solid #3741C4;
-	padding: 20px;
-}
-
-.cornflowerblue {
-	color: cornflowerblue;
+	padding-bottom: 10px;
 }
 
 .gold {
@@ -23,27 +15,22 @@
 
 #headSearch {
 	margin-bottom: 3px;
-	align-items: unset;
-	width: 250px;
+	align-items:unset;
+	width:250px;
 }
-
 #searchResults {
 	top: calc(96%);
-	width: 208px;
+	width:208px;
 }
-
-#searchInputHead:focus {
+#searchInputHead:focus{
 	border-color: rgb(83 90 237 / var(--tw-border-opacity)) !important;
 }
-
-#searchInputHead {
+#searchInputHead{
 	font-size: 16px;
-	border-radius: 5px;
-	margin-top: 3px;
 }
 
 #nav-menu {
-	margin-bottom: 5px;
+ 	margin-bottom: 5px;
 }
 
 .navbar.container {
@@ -56,21 +43,19 @@
 	display: flex;
 	margin: 0 auto;
 }
-
 .search-element .form-control {
 	display: flex;
 	height: 45px;
 }
-
 .search-element .form-control .btn {
 	display: flex;
 }
-
 #btnSearch {
 	width: 50px;
 	border: 0;
 	padding: 8px 0px 3px 0px;
 }
+
 
 .logo {
 	display: flex;
@@ -152,10 +137,10 @@
 /*희연님 css 소스*/
 /*페이지 TITLE*/
 .gradiTitle span, #filterHire.tag.non {
-	background: linear-gradient(184.78deg, #535AED 7.64%, #004F8B 120.07%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	border-color: rgb(74, 100, 240/ var( --tw-border-opacity));
+  background: linear-gradient(184.78deg, #535AED 7.64%, #004F8B 120.07%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-color: rgb(74 100 240 / var(--tw-border-opacity));
 }
 
 .clear {
@@ -163,6 +148,7 @@
 	font-size: 0.85rem;
 	color: #606060;
 }
+
 
 .preferTitle {
 	color: #292929;
@@ -199,7 +185,6 @@
 #userDetail select:focus, #userDetail input[type='number']:focus { 
 	--tw-ring-color: #535AED;
 }
-
 .optionRegion {
 	margin-top: 20px;
 	display: flex;
@@ -207,17 +192,16 @@
 	border-radius: 4px;
 	overflow: hidden;
 }
-
-.optionRegion.com-list, .optionRegion.rcrt-list {
-	display: block;
-	width: 100%;
-	border: none;
+.optionRegion.com-list, .optionRegion.rcrt-list{
+		display: block;
+		width: 100%;
+		border:none;
 }
-
 .region-list {
 	width: 100%; /* 전체 너비 사용 */
 	max-height: 240px;
 	padding: 10px;
+	/* margin-top: 10px; */
 	background-color: #f8f9fa;
 	overflow-y: auto;
 	color: #606060;
@@ -260,8 +244,7 @@
 	margin-bottom: 1.5px;
 }
 
-.location-list input[type='checkbox']:focus, #welfareCheckboxes input[type='checkbox']:focus
-	{ 
+.location-list input[type='checkbox']:focus, #welfareCheckboxes input[type='checkbox']:focus { 
 	--tw-ring-shadow: none;
 }
 
@@ -289,7 +272,7 @@
 }
 
 .studyAdd {
-	margin-top: 0 !important;
+	margin-top: 0 !important; 
 	margin-bottom: 0 !important;
 }
 
@@ -362,6 +345,8 @@
 	margin-bottom: 5px;
 }
 
+
+
 .optionJob {
 	border: 1px solid #dee2e6;
 	border-radius: 4px;
@@ -396,10 +381,18 @@
 	margin: 0;
 	cursor: pointer;
 }
-
 .category-list.industry {
 	min-width: 180px;
-	max-width: 180px;
+	max-width:180px;
+}
+
+.tag-group input[type="checkbox"] {
+	display: none;
+}
+
+.tag-group input[type="checkbox"]:checked+label {
+	background-color: #007bff;
+	color: #fff;
 }
 
 .toggle-button {
@@ -408,44 +401,43 @@
 	cursor: pointer;
 }
 
-.no-shadow:hover { 
+.no-shadow:hover {
 	--tw-shadow: none;
 	font-weight: 600;
 }
-
 .region-list.wish ul {
 	grid-auto-flow: unset;
 	grid-template-columns: repeat(2, 1fr);
 }
-
-.region-list.wish {
+.region-list.wish{
 	width: 200px;
 }
 
 /*리뷰페이지 태그*/
-.tag-info.mt-6 {
-	margin-top: 0;
+.tag-info.mt-6{
+	margin-top:0;
+
 }
 
 .com-tag {
-	display: flex;
-	flex-direction: column;
-	height: inherit;
+    display: flex;
+    flex-direction: column;
+    height: inherit;
 }
 
 .click-tag {
-	flex: 8;
+    flex: 8;
 }
 
 .add-tag-text {
-	flex: 2;
+    flex: 2; 
 }
 
 .submit-info {
-	width: 100%;
-	text-align: center;
-	padding: 20px;
-	margin-top: 20px;
+    width: 100%;
+    text-align: center; 
+    padding: 20px;
+    margin-top: 20px;
 }
 
 /*-------------------------------------------------------------*/
@@ -458,6 +450,12 @@
 .sizing {
 	padding: 50px;
 }
+/* .row, .form-group {
+            width: 100%;
+        } */
+/*  .form-group {
+    margin-bottom: 20px;
+} */
 .view-form .company:focus, .view-form .title:focus {
 	outline: none;
 	box-shadow: none;
@@ -466,6 +464,8 @@
 .add-qna-write {
 	display: inline-block;
 }
+
+
 
 textarea {
 	width: 90%;
@@ -500,21 +500,28 @@ textarea:focus {
 .textarea-group {
 	margin-bottom: 0;
 }
-
 .textarea-group textarea {
 	width: 100%;
-	padding: 10px;
-	border: 1px solid #ddd;
-	border-radius: 5px;
-	resize: none;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: none;
+	
+	
+	
+}
+
+
+
+.view-form .company, .view-form .title {
+    width: 100%;
+    padding: 11.5px;
+    border: 1px solid #ddd;
+    border-radius: 0 5px 5px 0;
+    resize: none;
 }
 
 .view-form .company, .view-form .title {
-	width: 100%;
-	padding: 11.5px;
-	border: 1px solid #ddd;
-	border-radius: 0 5px 5px 0;
-	resize: none;
 	font-size: 18px;
 	color: #595959;
 }
@@ -567,9 +574,9 @@ textarea:focus {
 	margin-top: 5px;
 }
 
-#recruit_job_meta {
+#recruit_job_meta{
 	margin-top: 15px;
-	font-size: 14px;
+	font-size:14px;
 }
 
 .job_meta .job-keyword {
@@ -608,35 +615,34 @@ textarea:focus {
 	border-bottom: 1px solid #ccc;
 	margin-bottom: 15px;
 }
-
 .compare-button {
-	margin: 3px; /* Adjust spacing between the label and button */
-	position: relative;
-	/* Set relative positioning for the tooltip to position correctly */
+    margin: 3px; /* Adjust spacing between the label and button */
+    position: relative; /* Set relative positioning for the tooltip to position correctly */
+
 	cursor: pointer;
 	font-size: 0.9rem;
-	border-radius: 5px;
+    border-radius: 5px;
 	padding: 0.3rem 10px;
+	
 	background-color: #FFF;
-	color: #6777EE;
-	border: 1px solid #6777EE;
+    color: #6777EE;
+        border: 1px solid #6777EE;
 }
 
 .compare-button:hover::after {
-	content: "3개의 기업을 선택하여 비교할 수 있습니다";
-	position: absolute;
-	white-space: nowrap;
-	background-color: #f4f4f4;
-	color: #535353;
-	padding: 5px 10px;
-	margin-left: 5px;
-	border-radius: 6px;
-	top: -40px;
-	left: 50%;
-	transform: translateX(-50%);
-	z-index: 1;
+    content: "3개의 기업을 선택하여 비교할 수 있습니다";
+    position: absolute;
+    white-space: nowrap;
+    background-color: #f4f4f4;
+    color: #535353;
+    padding: 5px 10px;
+    margin-left: 5px;
+    border-radius: 6px;
+    top: -40px;
+    left: 50%; 
+    transform: translateX(-50%);
+    z-index: 1;
 }
-
 .com-name {
 	font-size: 1.1rem;
 	color: #707070;
@@ -651,6 +657,11 @@ textarea:focus {
 .qnalist.job_tit {
 	font-size: 1.5rem;
 	color: #333;
+}
+
+.qna-add-date, .recruit-end-date {
+	font-size: 14px;
+	margin-right: 8px;
 }
 
 .qna-list-index {
@@ -668,16 +679,15 @@ textarea:focus {
 	text-align: center;
 }
 /* qna 조회수 댓글수 */
-.views-comments {
+.views-comments{
 	font-size: 14px;
 }
 
-.views-comments i {
+.views-comments i{
 	font-size: 14px;
-	margin-right: 7px;
+	margin-right: 7px; 
 }
-
-.fa-comment {
+.fa-comment{
 	margin-left: 7px;
 }
 
@@ -694,9 +704,9 @@ textarea:focus {
 
 .com-info {
 	flex: 1;
-	font-size: 14px;
 	border-left: 2px solid #ccc;
 	padding-left: 20px;
+	font-size:14px;
 }
 
 .com-list.com-info {
@@ -704,17 +714,15 @@ textarea:focus {
 	border-left: 2px solid #ccc;
 	padding-left: 20px;
 }
-
 .section.com-detail {
-	padding-bottom: 0;
+	padding-bottom:0;
 }
-
 .support_detail {
 	text-align: right;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-end;
-	font-size: 15px;
+	font-size:15px;
 }
 
 .recruit-present-info {
@@ -749,7 +757,7 @@ textarea:focus {
 	margin-bottom: 50px;
 }
 
-.list-header>.moving-btn {
+.list-header > .moving-btn{
 	margin-top: 0px;
 	margin-bottom: 0px;
 	margin-left: 15px;
@@ -771,7 +779,6 @@ textarea:focus {
 	transition: background-color 0.3s;
 	line-height: 30px;
 }
-
 .moving-btn button {
 	padding: 5px 10px;
 	border: none;
@@ -789,14 +796,14 @@ textarea:focus {
 
 /**/
 .InpBox {
-	margin: 5px 5px 5px 15px;
-	border: 1px solid #BFBFBF;
-	border-radius: 6px;
-	overflow: hidden;
-	background-color: white;
-	position: relative;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-	width: auto;
+    margin: 5px 15px;
+    border: 1px solid #BFBFBF;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: white;
+    position: relative;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); */
+    width: auto;
 }
 
 .InpBox select {
@@ -862,15 +869,15 @@ textarea:focus {
 }
 /*검색폼*/
 #searchForm {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background: #FFFFFF;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-	border-radius: 15px;
-	width: 50%;
-	margin: 20px auto;
-	height: 50px;
+display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    /* padding: 10px 20px; */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    width: 50%;
+    margin: 20px auto;
 }
 
 #searchForm .input {
@@ -885,11 +892,10 @@ textarea:focus {
 	background: #6777EE;
 	border: none;
 	color: white;
-	padding: 12px 20px;
+	padding: 8px 20px;
 	border-radius: 0 15px 15px 0;
 	cursor: pointer;
 	font-size: 14px;
-	height: 50px;
 }
 
 #searchForm button.search:hover {
@@ -918,29 +924,29 @@ textarea:focus {
 #detail-search-btn:hover, #btn-detail:hover {
 	background-color: #5566cc;
 }
-
 .addqna-form {
-	display: flex;
-	align-items: center;
-	width: 100%;
-	margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    width: 100%; 
+    margin-bottom: 8px;
 }
 
 #write-company, #write-title {
-	/* margin-right: 8px; */
-	white-space: nowrap;
-	font-size: 20px;
-	border: 1px solid #ddd;
-	padding: 7px 14px;
-	border-radius: 5px 0 0 5px;
-	border-right: hidden;
-	background-color: #E0E3EA;
-	min-width: 80px;
-	text-align: center;
+    /* margin-right: 8px; */
+    white-space: nowrap;
+    font-size: 20px;
+    border: 1px solid #ddd;
+    padding: 7px 14px;
+    border-radius: 5px 0 0 5px;
+    border-right: hidden;
+    background-color: #E0E3EA;
+    min-width: 80px;
+    text-align: center;
 }
 
-#write-form {
-	width: 100%;
+
+#write-form{
+	width:100%;
 }
 /*드롭다운 형식 검색*/
 .dropdown-content.addqna {
@@ -989,10 +995,1075 @@ textarea:focus {
 
 .view-form.addqna {
 	position: relative;
-	width: 100%
+	width:100%
 }
 
 .view-form.addqna .company, .view-form.addqna .title {
+	font-size: 18px;
+	color: #595959;
+}
+
+/*페이징*/
+.PageBox.z-custom {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin-top: 3rem;
+	margin: 3rem auto 0;
+	text-align: center;
+}
+
+.pagination.z-custom {
+	display: flex;
+	list-style: none;
+	padding: 0;
+}
+
+.pagination.z-custom li {
+	margin: 0;
+	display: flex;
+	align-items: center;
+}
+
+.pagination.z-custom li a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 36px;
+	padding: 8px 12px;
+	color: #000;
+	text-decoration: none;
+	border: 1px solid #ddd;
+	background-color: #fff;
+	transition: background-color 0.3s, color 0.3s;
+}
+
+.paging-icon.z-custom {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 4px;
+	margin-top: 3px;
+	min-height: 23px;
+	font-size: 18px;
+	color: #6777EE;
+}
+
+.pagination.z-custom li.active a, .pagination.z-custom li a:hover,
+	.pagination.z-custom li.active a span, .pagination.z-custom li a:hover span
+	{
+	background-color: #6777EE;
+	color: #FFF;
+	border-color: #6777EE;
+}
+
+.pagination.z-custom li:first-child a {
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.pagination.z-custom li:last-child a {
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+/*체크박스(기업목로, 채용중 체크박스)*/
+.list-title-content {
+	display: flex;
+	align-items: center;
+	flex-grow: 1;
+}
+
+.checkbox-wrapper {
+	margin-left: 20px;
+}
+
+.filter-checkbox {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	width: 20px;
+	height: 20px;
+	border: 2px solid #6777EE;
+	border-radius: 4px;
+	position: relative;
+	cursor: pointer;
+}
+
+.filter-checkbox:checked {
+	background-color: #6777EE;
+}
+
+.filter-checkbox:checked::after {
+	content: '';
+	position: absolute;
+	left: 5px;
+	top: 2px;
+	width: 6px;
+	height: 11px;
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	transform: rotate(45deg);
+}
+
+.filter-label {
+	margin-left: 8px;
+	font-size: 1rem;
+	color: #333;
+	cursor: pointer;
+}
+
+.checkbox-wrapper:hover .filter-checkbox {
+	border-color: #5566cc;
+}
+
+.checkbox-wrapper:hover .filter-checkbox:checked {
+	background-color: #5566cc;
+}
+
+/*설문조사*/
+.survey-form {
+	margin: 0px 20px;
+	background-color: white;
+	padding: 10px;
+	border-radius: 8px;
+	border: 1px solid #6375F1;
+}
+
+.survey.section {
+	padding: 10px 30px;
+	border-bottom: 1px solid #EEEEEE;
+}
+
+.survey.section:last-child {
+	border-bottom: none;
+}
+
+.survey.section h2 .survey-num {
+	font-size: 30px;
+}
+
+.survey.section h2 {
+	font-size: 24px;
+	color: #595959;
+	padding: 5px 10px;
+}
+
+.survey.radio-toolbar {
+	display: flex;
+	justify-content: space-between;
+	margin: 20px 5px;
+	background: #F2F2F2;
+	padding: 10px 50px;
+	border-radius: 30px;
+}
+
+.survey.radio-toolbar input[type="radio"], .itv-toolbar input[type="radio"]
+	{
+	display: none;
+}
+
+.survey.radio-toolbar label {
+	color: #595959;
+	padding: 5px 20px;
+	border-radius: 20px;
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+}
+
+.survey.radio-toolbar input[type="radio"]:checked+label, .itv-toolbar input[type="radio"]:checked+label
+	{
+	background: linear-gradient(184.78deg, #7476FA 7.64%, #0071BC 120.07%);
+	color: #FFF;
+}
+
+.survey.radio-toolbar label:hover, .itv-toolbar label:hover {
+	background: linear-gradient(184.78deg, #7476FA 7.64%, #0071BC 120.07%);
+	color: #FFF;
+}
+
+.btn-survey-check {
+	margin: 10px 20px;
+	font-size: 1.25rem;
+	border-radius: 8px;
+}
+
+/* 면접 후기 */
+.itvCpContent {
+	display: flex;
+	justify-content: flex-start;
+	gap: 20px;
+	align-items: center;
+}
+
+.itvCpname {
+	height: 40px;
+	width: 70%;
+}
+
+#itvWriteQnA select {
+	font-size: 0.9rem;
+	padding-bottom: 0.3rem;
+	padding-top: 0.3rem;
+	border-radius: 2.5px;
+}
+
+.space-btw {
+	display: flex;
+	gap: 13%;
+}
+
+.itv-toolbar {
+	display: flex;
+	justify-content: space-between;
+	gap: 10px;
+	margin: 10px 5px;
+	background: #F2F2F2;
+	padding: 5px 20px;
+	border-radius: 30px;
+}
+
+.itv-toolbar label {
+	color: #595959;
+	padding: 3px 15px;
+	border-radius: 20px;
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+	font-size: 0.9rem;
+}
+
+.form-control.h-1 {
+	height: inherit;
+}
+
+.itv-label {
+	font-weight: 600;
+	color: #707070;
+}
+/*qna 댓글*/
+.writer-info p {
+	display: inline-block;
+}
+
+.writer-info {
+	margin-top: 0;
+	display: inline-block;
+	text-align: right;
+	font-size: 0.9rem;
+}
+
+.writer-info .writer {
+	font-size: 1.1rem;
+	color: #595959;
+}
+
+.writer-info button {
+	font-size: 0.8rem;
+}
+
+#comment {
+	border-top: 1px solid #ccc;
+}
+
+.comment-list {
+	margin-top: 30px;
+	border-top: 1px solid #ccc;
+	padding: 20px;
+}
+
+.comment-list table {
+	width: 100%;
+}
+
+.comment-list table th, .comment-list table td {
+	padding: 10px;
+	border-bottom: 1px solid #ddd;
+}
+
+.comment-list table th {
+	background-color: #F9F9F9;
+	width: 80%;
+	font-weight: bold;
+}
+
+.comment-list table td {
+	width: 10%;
+	text-align: center;
+}
+
+.add-comment {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: #FFFFFF;
+	padding: 10px 20px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	border-radius: 25px;
+	width: 80%;
+	margin: 20px auto;
+}
+
+.add-comment input[type="text"] {
+	border: none;
+	width: 90%;
+	font-size: 18px;
+}
+
+.add-comment .btnAddComment {
+	border-radius: 15px;
+	background-color: #525DED;
+	color: #fff;
+	transition: background-color 0.3s;
+	width: auto;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.add-comment .btnAddComment:hover {
+	background-color: #3741C4;
+}
+
+.add-comment input[type="text"]:focus {
+	outline: none;
+	border: none;
+	box-shadow: none;
+}
+
+#comment th:nth-child(1), #comment td:nth-child(1) {
+	width: auto;
+	text-align: left;
+	padding-left: 30px;
+}
+
+#comment th:nth-child(2), #comment td:nth-child(2) {
+	width: 180px;
+	text-align: left;
+}
+
+#comment .commentContent, .views {
+	font-size: 16px;
+	text-align: right;
+}
+
+.comment-edit {
+	display: flex;
+	justify-content: space-between;
+}
+
+.comment-edit div {
+	display: flex;
+	justify-content: unset;
+}
+
+.comment-edit span, .writer-info .comment-icon span:hover {
+	cursor: pointer;
+}
+
+.comment-edit span:hover, .writer-info .comment-icon span:hover {
+	color: #515CEB;
+}
+
+.commentInfo span {
+	cursor: pointer;
+}
+
+.commentInfo span:hover {
+	color: 4C57E4;
+}
+
+.comment-paging {
+	margin-top: 20px;
+	text-align: center;
+	font-size: 14px;
+}
+
+.more-comment {
+	border-radius: 15px;
+	background-color: #525DED;
+	color: #fff;
+	transition: background-color 0.3s;
+	text-align: center;
+}
+
+.more-comment:hover {
+	background-color: #3741C4;
+}
+
+.write-date {
+	font-size: 12px;
+}
+
+/* 민곤님 css */
+.itvDetail.show {
+  display: block;
+}
+
+
+#itvImg {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	margin-right: 30px;
+}
+.itvCardTags{
+
+	position: absolute;
+    right: 2.5rem;
+    top: 2.5rem;
+    z-index: 1;
+    margin-bottom: 1.5rem;
+
+}
+
+
+.itvCardTags i {
+	position: relative;
+	top: 60px;
+	cursor: pointer;
+}
+
+.itvCardTags a{
+	position: relative;
+	left: 40px;
+	bottom: 25px;
+	
+}
+
+
+
+.itvDetail {
+	display: none;
+}
+.itvDetail span p{
+	color: #888;
+}
+.itvDetailInfoTitle {
+	float: left;
+	width: 180px;
+	color: #222;
+}
+
+.itvDetail p{
+	overflow: hidden;
+    padding: 6px 0;
+}
+
+.itvdropdownContent {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: stretch;
+	justify-content: flex-start;
+	margin-bottom: 20px;
+}
+
+.itvContentFooter {
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+}
+
+
+.itvDetailInfo {
+	margin-bottom: 15px;
+}
+
+
+.cpCimg img {
+	max-width: 70px;
+	max-height: 70px;
+}
+
+.cpcCpChart {
+	width: 800px;
+	height: 400px;
+	margin: auto;
+	margin-top: 40px;
+	margin-bottom: 50px;
+}	
+
+.cpCMember h3 {
+	margin-top: 50px;
+	margin-bottom: 30px;
+}
+
+.cpCMember p {
+	margin-top: 20px;
+	margin-bottom: 50px;
+}
+
+.cpcComCard {
+	border-top: 1px solid  #ccc;
+	padding: 20px;
+	margin-bottom: 50px;
+}
+
+.min-h-400 {
+	min-height: 400px;
+}
+
+.cpsChart {
+	width: 250px;
+	height: 250px;
+}
+
+
+
+.cpsCompanyInfo img {
+	max-width: 85px;
+    height: auto;
+}
+
+.cpsCard {
+	display: flex;
+	flex-direction: column;
+}
+
+
+.comContent img {
+	width: 70px;
+	height: 70px;
+}
+
+.cpComInfo {
+	height: 380px;
+}
+
+.cpComFont {
+	width: 106px;
+	height: 23px;
+}
+
+/* 희연 */
+.min-w-90 {
+	min-width: 90px;
+	font-size: 0.9rem;
+	cursor: pointer;
+	text-align: center;
+}
+
+.studycard, #btnDelStudy {
+	cursor: pointer;
+}
+.region-list.wish ul {
+	grid-auto-flow: unset;
+	grid-template-columns: repeat(2, 1fr);
+}
+.region-list.wish{
+	width: 200px;
+}
+
+/*리뷰페이지 태그*/
+.tag-info.mt-6{
+	margin-top:0;
+
+}
+
+.com-tag {
+    display: flex;
+    flex-direction: column; /* Ensures the children are stacked vertically */
+    height: inherit; /* Set a fixed height if needed, or make sure it inherits properly */
+}
+
+.click-tag {
+    flex: 8; /* Takes up 80% of the space */
+}
+
+.add-tag-text {
+    flex: 2; /* Takes up 20% of the space */
+}
+
+.submit-info {
+    width: 100%; /* Ensure the container takes full width */
+    text-align: center; /* Center-align the text inside the container */
+    padding: 20px; /* Optional: Adds padding around the text for better spacing */
+    margin-top: 20px; /* Optional: Adds space above the container if needed */
+}
+
+/*-------------------------------------------------------------*/
+/*페이지 안내 */
+.qanlist.mt-6, .comlist.mt-6, .survey-list.mt-6, .recruit-list.mt-6,
+	.review.mt-6 {
+	margin-top: 1.5rem;
+}
+/*요소 크기 변경*/
+.sizing {
+	padding: 50px;
+}
+/* .row, .form-group {
+            width: 100%;
+        } */
+/*  .form-group {
+    margin-bottom: 20px;
+} */
+.view-form .company:focus, .view-form .title:focus {
+	outline: none;
+	box-shadow: none;
+}
+
+.add-qna-write {
+	display: inline-block;
+}
+
+textarea {
+	width: 90%;
+	resize: none;
+	font-size: 18px;
+}
+
+textarea:focus {
+	outline: none;
+	box-shadow: none;
+}
+
+.review-text.comment-section {
+	margin: 10px 10px;
+	padding: 0px 20px;
+}
+
+.review-text.comment-section h3 {
+	margin-top: 30px;
+}
+
+.review-text.comment-section textarea {
+	width: 100%;
+	height: 100px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 10px 10px 10px 20px;
+	margin: 10px 0px;
+	resize: none;
+}
+
+.textarea-group {
+	margin-bottom: 0;
+}
+
+.textarea-group textarea, .view-form .company, .view-form .title {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	resize: none;
+}
+
+.view-form .company, .view-form .title {
+	margin-top: 5px;
+	font-size: 18px;
+	color: #595959;
+}
+
+.review-form {
+	position: relative;
+}
+
+.card-content-wrapper, .card-content-wrapper btn-survey-check {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.z-custom.card {
+	height: auto;
+	min-height: 100vh;
+	overflow-y: visible;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.card-content {
+	margin-top: 20px;
+	padding: 40px;
+	border: 1px solid #3741C4;
+	border-radius: 10px;
+	background-color: #FEFEFE;
+}
+
+.integration-single.z-custom .container {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+/*목록출력*/
+.list-header {
+	margin: 15px 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#list-cnt {
+	color: #6777EE;
+}
+
+.job_meta {
+	margin-top: 5px;
+}
+
+.job_meta .job-keyword {
+	padding: 3px 5px;
+	color: #6777EE;
+	text-decoration: none;
+	border: 1px solid #6777EE;
+	border-radius: 5px;
+	background-color: #fff;
+	transition: background-color 0.3s, color 0.3s;
+	margin-right: 5px;
+}
+
+.list_info {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+/*리뷰등록*/
+.review-text textarea {
+	width: 100%;
+	height: 100px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 10px;
+	margin-top: 10px;
+	resize: none;
+}
+
+.box_item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 30px;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 15px;
+}
+
+.com-name {
+	font-size: 1.1rem;
+	color: #707070;
+}
+
+.recruit-list.job_tit {
+	margin: 7px 0;
+	font-size: 1.5rem;
+	color: #333;
+}
+
+.qnalist.job_tit {
+	font-size: 1.5rem;
+	color: #333;
+}
+
+.qna-add-date, .recruit-end-date {
+	font-size: 15px;
+	margin-right: 8px;
+}
+
+.qna-list-index {
+	flex: 0.1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+	background-color: #6777EE;
+	color: #FFF;
+	border-radius: 50%;
+	font-size: 0.9rem;
+	line-height: 40px;
+	margin-right: 10px;
+	text-align: center;
+}
+
+#qna-title {
+	margin: 10px 0;
+}
+
+.view-count i {
+	margin-left: 5px;
+}
+
+#report-form {
+	display: inline;
+}
+
+.report-btn {
+	margin-left: 10px; /* 신고 버튼과 다른 요소 사이 간격 */
+	padding: 5px 10px; /* 버튼 패딩 */
+	background-color: rgb(54, 86, 203); /* 버튼 배경색 */
+	border: none; /* 버튼 테두리 제거 */
+	cursor: pointer; /* 커서 모양 변경 */
+	color: #fff;
+	border-radius: 5px;
+}
+
+.job_sector {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
+}
+
+.com-title {
+	flex: 6;
+}
+
+.com-info {
+	flex: 0.9;
+	border-left: 2px solid #ccc;
+	padding-left: 20px;
+}
+
+.com-list.com-info {
+	flex: 2;
+	border-left: 2px solid #ccc;
+	padding-left: 20px;
+}
+
+.support_detail {
+	text-align: right;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+}
+
+.recruit-present-info {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	align-items: center;
+}
+
+/*기업목록 로고 이미지*/
+.com-list.com-image, com-image {
+	flex-shrink: 0;
+	width: 100px;
+	height: 100px;
+	margin-right: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+}
+
+.com-list.com-image img, .com-image img {
+	width: 100px;
+	height: auto;
+	border-radius: 8px;
+}
+
+/*이전,다음,수정,등록 버튼*/
+.moving-btn {
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
+
+.moving-btn .btn {
+	border-radius: 5px;
+	width: 100px;
+	height: 40px;
+}
+
+.moving-btn a {
+	padding: 5px 10px;
+	border: none;
+	border-radius: 5px;
+	background-color: #3656CB;
+	color: #fff;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	line-height: 30px;
+}
+
+.moving-btn a:hover {
+	background-color: #5566cc;
+}
+
+/**/
+.InpBox {
+	margin-right: 5px;
+	border: 1px solid #BFBFBF;
+	border-radius: 6px;
+	overflow: hidden;
+	background-color: white;
+	position: relative;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	width: auto;
+}
+
+.InpBox select {
+	width: 100%;
+	max-width: 80px;
+	min-width: 80px;
+	padding: 8px 16px;
+	border: none;
+	background: transparent;
+	appearance: none;
+	color: #707070;
+	font-size: 14px;
+}
+
+.InpBox::after {
+	content: '\25BC';
+	position: absolute;
+	top: 0;
+	right: 10px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #BFBFBF;
+	font-size: 10px;
+}
+
+.InpBox:hover {
+	border-color: #6777EE;
+	background-color: #6777EE;
+	cursor: pointer;
+}
+
+.InpBox:hover select {
+	color: #FFF;
+}
+
+.InpBox select option {
+	color: #707070;
+}
+
+.list {
+	text-align: left;
+	width: 500px;
+}
+
+.list-title {
+	margin-left: 10px;
+}
+
+.com-list.list-title {
+	display: flex;
+	align-items: center;
+	justify-content: space-between; /* Adjust as needed */
+	margin: 15px 0;
+}
+
+.list-title span, .list-title p {
+	font-size: 1.5rem;
+	display: inline;
+	color: #333;
+}
+/*검색폼*/
+#searchForm {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #FFFFFF;
+	padding: 10px 20px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	border-radius: 25px;
+	width: 50%;
+	margin: 20px auto;
+}
+
+#searchForm .input {
+	flex-grow: 1;
+	border: none;
+	padding: 8px 15px;
+	font-size: 14px;
+	outline: none;
+}
+
+#searchForm button.search {
+	background: #6777EE;
+	border: none;
+	color: white;
+	padding: 8px 20px;
+	border-radius: 0 15px 15px 0;
+	cursor: pointer;
+	font-size: 14px;
+}
+
+#searchForm button.search:hover {
+	background-color: #5a67d8;
+}
+
+#searchForm .input:focus {
+	outline: none;
+	border: none;
+	box-shadow: none;
+}
+
+/*상세조회버튼*/
+#detail-search-btn, #btn-detail {
+	padding: 5px 10px;
+	border: none;
+	border-radius: 5px;
+	background-color: #6777EE;
+	color: #fff;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	line-height: 30px;
+	font-size: 16px;
+}
+
+#detail-search-btn:hover, #btn-detail:hover {
+	background-color: #5566cc;
+}
+
+/*드롭다운 형식 검색*/
+.dropdown-content.addqna {
+	position: absolute;
+	top: calc(100%);
+	left: 0;
+	width: 100%;
+	background-color: #fff;
+	border: none;
+	border-top: none;
+	border-radius: 0 0 5px 5px;
+	z-index: 1000;
+}
+
+.dropdown-content.addqna.show {
+	display: block;
+}
+
+.dropdown-content.addqna .dropdown-item {
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-top: none;
+	cursor: pointer;
+}
+
+.dropdown-content.addqna .dropdown-item:last-child {
+	border-radius: 0 0 5px 5px;
+}
+
+.dropdown-content.addqna .dropdown-item:hover {
+	background-color: #f9f9f9;
+}
+
+.view-form.qnaview p {
+	margin: 0;
+}
+
+.view-form.qnaview .company {
+	color: #525DED;
+	font-size: 1.3rem;
+}
+
+.view-form.qnaview .title {
+	margin-top: 5px;
+}
+
+.view-form.addqna {
+	position: relative;
+}
+
+.view-form.addqna .company, .view-form.addqna .title {
+	margin-top: 5px;
 	font-size: 18px;
 	color: #595959;
 }
@@ -1328,18 +2399,7 @@ textarea:focus {
 	box-shadow: none;
 }
 
-#comment th:nth-child(1), #comment td:nth-child(1) {
-	width: auto;
-	text-align: left;
-	padding-left: 30px;
-}
-
-#comment th:nth-child(2), #comment td:nth-child(2) {
-	width: 180px;
-	text-align: left;
-}
-
-#comment .commentContent, .views {
+#comment .commentContent {
 	font-size: 16px;
 	text-align: right;
 }
@@ -1367,7 +2427,7 @@ textarea:focus {
 }
 
 .commentInfo span:hover {
-	color: #4C57E4;
+	color: 4C57E4;
 }
 
 .comment-paging {
@@ -1394,53 +2454,29 @@ textarea:focus {
 
 /* 민곤님 css */
 .itvDetail.show {
-	display: block;
+  display: block;
+}
+.itvCard {
+
+	height: auto;
+	width: 890px;
+	margin-bottom: 30px;
+	min-height: auto;
+	border: 1px solid #3741C4;
+	margin-left: 49px;
 }
 
-#itvImg {
-	width: 80px;
-	height: 80px;
-	border-radius: 50%;
-	margin-right: 30px;
-}
 
-.itvCardTags {
-	position: absolute;
-	right: 2.5rem;
-	top: 2.5rem;
-	z-index: 1;
-	margin-bottom: 1.5rem;
-}
-
-.itvCardTags i {
+.card-tags i {
 	position: relative;
-	top: 60px;
+	top: 210px;
 	cursor: pointer;
 }
 
-.itvCardTags a {
-	position: relative;
-	left: 40px;
-	bottom: 25px;
-}
 
 .itvDetail {
 	display: none;
-}
-
-.itvDetail span p {
-	color: #888;
-}
-
-.itvDetailInfoTitle {
-	float: left;
-	width: 180px;
-	color: #222;
-}
-
-.itvDetail p {
-	overflow: hidden;
-	padding: 6px 0;
+	
 }
 
 .itvdropdownContent {
@@ -1457,8 +2493,15 @@ textarea:focus {
 	flex-direction: column;
 }
 
+
 .itvDetailInfo {
 	margin-bottom: 15px;
+}
+
+
+.cpCimg img {
+	max-width: 100px;
+	max-height: 100px;
 }
 
 .cpcCpChart {
@@ -1480,102 +2523,13 @@ textarea:focus {
 }
 
 .cpcComCard {
-	border-top: 1px solid #ccc;
+	border-top: 1px solid  #ccc;
 	padding: 20px;
 	margin-bottom: 50px;
 }
 
 .min-h-400 {
 	min-height: 400px;
-}
-
-.cpsChart {
-	width: 250px;
-	height: 250px;
-}
-
-.cpsCompanyInfo img {
-	max-width: 85px;
-	height: auto;
-}
-
-.cpsCard {
-	display: flex;
-	flex-direction: column;
-}
-
-.comContent img {
-	width: 70px;
-	height: 70px;
-}
-
-.cpComInfo {
-	height: 380px;
-}
-
-.cpComFont {
-	width: 106px;
-	height: 23px;
-}
-
-/* 희연 */
-.min-w-90 {
-	min-width: 90px;
-	font-size: 0.9rem;
-	cursor: pointer;
-	text-align: center;
-}
-
-.studycard, #btnDelStudy {
-	cursor: pointer;
-}
-
-.qna-add-date, .recruit-end-date {
-	font-size: 15px;
-	margin-right: 8px;
-}
-
-#qna-title {
-	margin: 10px 0;
-}
-
-.view-count i {
-	margin-left: 5px;
-}
-
-#report-form {
-	display: inline;
-}
-
-.report-btn {
-	margin-left: 10px; /* 신고 버튼과 다른 요소 사이 간격 */
-	padding: 5px 10px; /* 버튼 패딩 */
-	background-color: rgb(54, 86, 203); /* 버튼 배경색 */
-	border: none; /* 버튼 테두리 제거 */
-	cursor: pointer; /* 커서 모양 변경 */
-	color: #fff;
-	border-radius: 5px;
-}
-
-/* 민곤님 css */
-.itvCard {
-	height: auto;
-	width: 890px;
-	margin-bottom: 30px;
-	min-height: auto;
-	border: 1px solid #3741C4;
-	margin-left: 49px;
-}
-
-.card-tags i {
-	position: relative;
-	top: 210px;
-	cursor: pointer;
-}
-
-.cpCimg img {
-	max-width: 100px;
-	max-height: 100px;
 }
 
 .cpsContent h3 {
@@ -1591,6 +2545,26 @@ textarea:focus {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.cpsCard {
+	display: flex;
+	flex-direction: column;
+}
+
+
+.comContent img {
+	width: 70px;
+	height: 70px;
+}
+
+.cpComInfo {
+	height: 380px;
+}
+
+.cpComFont {
+	width: 106px;
+	height: 23px;
 }
 
 /* 윤준섭 */
@@ -1652,51 +2626,5 @@ textarea:focus {
 	width: 80%;
 	margin-right: 5px;
 }
-.button-group {
-	border: 2px solid #4444;
-	border-radius: 10px;
-	text-align: center;
-	display: flex;
-	padding: none;
-}
-
-.button-group>div {
-	background: transparent;
-	color: #525252;
-	font-size: 1.1rem;
-}
-
-.button-group>div:first-child {
-	border-top-left-radius: 10px;
-	border-bottom-left-radius: 10px;
-	border-right: 2px solid #4444;
-}
-
-.button-group>div:last-child {
-	border-top-right-radius: 10px;
-	border-bottom-right-radius: 10px;
-}
-
-.button-group>div {
-	padding: 10px 30px;
-}
-
-.button-group>div {
-	width: 100%;
-}
-
-.form-label {
-	font-size: 1.2rem;
-}
 
 
-.form-content>div {
-	text-align: center;
-}
-
-.form-content {
-	border: 2px solid #4444;
-	border-radius: 10px;
-	border-top: 0;
-	padding: 10px;
-}

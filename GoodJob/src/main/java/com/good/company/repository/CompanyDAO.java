@@ -527,12 +527,6 @@ public class CompanyDAO {
 					dto.setReview_avg(rs.getString("score"));
 					dto.setIdst_name(rs.getString("idst_name"));
 					dto.setImage(rs.getString("image"));
-					dto.setWel_avg(rs.getString("wel_avg"));
-					dto.setStab_avg(rs.getString("stab_avg"));
-					dto.setSal_avg(rs.getString("sal_avg"));
-					dto.setCul_avg(rs.getString("cul_avg"));
-					dto.setPot_avg(rs.getString("pot_avg"));
-					dto.setHire_avr_salary(rs.getInt("hire_avr_salary"));
 					
 					return dto;
 					

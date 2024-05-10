@@ -6,84 +6,177 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<title>계정 찾기</title>
 <%@include file="/WEB-INF/views/inc/asset.jsp"%>
 <style>
-#id{
+.mb-4 {
+	font-family: Pretendard-Regular;
+	margin-bottom: 0px;
+}
+
+.bg-white {
+	margin: 0 auto;
+}
+
+.form-label {
+	font-family: Pretendard-Regular;
+	font-size: 1.2rem;
+}
+
+#login_letter {
+	font-family: Pretendard-Regular;
+	font-size: 1.5rem;
+	margin-bottom: 20px;
+}
+
+/* 공통 스타일 */
+.container {
+	max-width: 100%;
+}
+
+.button-group {
+	border: 2px solid #4444;
+	border-radius: 10px;
+	text-align: center;
+	display: flex;
+	padding: none;
+	/* 	background-image: linear-gradient(184.78deg, rgb(83, 90, 237) 7.64%, rgb(62, 178, 248) 120.07%); */
+}
+
+.button-group > div {
+	background: transparent;
+	color: #525252;
+	font-family: 'Pretendard-Regular';
+	font-size: 1.1rem;
+}
+.button-group > div:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-right: 2px solid #4444;
+   
+}
+
+.button-group > div:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+.button-group > div {
+	padding: 10px 30px;
+}
+
+.form-content {
+	border: 1px solid #525252;
+	padding: 10px;
+	border-radius: 10px;
+}
+.button-group > div {
+
 	width: 100%;
 }
+
 /* 폼 요소 스타일 */
 input[type="text"] {
+	font-family: 'Pretendard-Regular';
 	font-size: 1rem;
 	border-radius: 10px;
 	margin-bottom: 10px;
 	width: 100%;
 	border-color: rgb(235, 235, 235);
 }
+input[type="text"] {
+	font-family: 'Pretendard-Regular';
+	font-size: 1rem;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	width: 100%;
+	border-color: rgb(235, 235, 235);
+}
+
+.form-content>div {
+	text-align: center;
+}
+
+.btn_getAccount {
+	background-image: linear-gradient(184.78deg, rgb(83, 90, 237) 7.64%,
+	rgb(62, 178, 248) 120.07%);
+	color: white;
+	padding: 10px 20px;
+	border-radius: 10px;
+	font-size: .7rem;
+	font-family: 'Pretendard-Regular';
+	margin-left: 3px;
+	width: 90%;
+	margin-top: 20px;
+	font-size: 1.3rem;
+}
+.form-content {
+	border: 2px solid #4444;
+	border-radius: 10px;
+	border-top: 0;
+
+}
 </style>
 </head>
 <%@include file="/WEB-INF/views/inc/header.jsp"%>
 <body>
-	<section class="integration-single section pt-0">
+	<section>
 		<div class="container">
-			<div class="row justify-center">
-				<div
-					class="mt-16 integration-single-container rounded-xl bg-white py-16 px-5 shadow-lg md:px-10 tab w-70 min-h-[600px]">
-					<div class="mx-auto w-full max-w-[480px]">
-						<h2 class="mb-0">계정찾기</h2>
-						<p id="login_letter">잃어버린 계정을 찾을 수 있습니다.</p>
+			<div class="min-h-[980px] bg-white py-10 lg:col-6 lg:py-[114px]">
+				<div class="mx-auto w-full max-w-[480px]">
+					<h1 class="mb-4">계정찾기</h1>
+					<p id="login_letter">잃어버린 계정을 찾을 수 있습니다.</p>
 
-						<div class="button-group">
-							<div>
-								<button onclick="showContent('id')">아이디 찾기</button>
-							</div>
-							<div>
-								<button onclick="showContent('pw')">비밀번호 찾기</button>
-							</div>
+					<div class="button-group">
+						<div>
+						<button onclick="showContent('id')">아이디 찾기</button>
+					</div>
+						<div>
+							<button onclick="showContent('pw')">비밀번호 찾기</button>
 						</div>
+					</div>
 
 						<div id="idContent" class="form-content">
-							<label for="name" class="form-label">이름</label> <input
-								type="text" id="name" placeholder="등록한 이름을 입력하세요." /> <label
-								for="tel" class="form-label">연락처</label> <input type="text"
-								id="tel" placeholder="등록한 연락처를 입력하세요." />
+							<label for="name" class="form-label">이름</label> 
+							<input type="text" id="name" placeholder="등록한 이름을 입력하세요." /> 
+							<label for="tel" class="form-label">연락처</label> 
+								<input type="text" id="tel" placeholder="등록한 연락처를 입력하세요." />
 							<div>
-								<input type="submit" class="btn btn-primary mt-10 block w-full text-xl" id="btn_getId"
-									value="아이디 찾기" />
+								<input type="submit" class="btn_getAccount" id="btn_getId"value="아이디 찾기" />
 							</div>
 							<span id="yourid"></span>
 						</div>
-						<!-- 						<form action="/good/user/changepw.do" method="POST"> -->
+<!-- 						<form action="/good/user/changepw.do" method="POST"> -->
 						<div id="pwContent" class="form-content">
-							<label for="id" class="form-label">아이디</label> <input type="text"
-								id="id" placeholder="등록한 아이디를 입력하세요." /> <label for="tel"
-								class="form-label">연락처</label> <input type="text" id="getPw_tel"
-								placeholder="등록한 연락처를 입력하세요." />
+							<label for="id" class="form-label">아이디</label> 
+							<input type="text" id="id" placeholder="등록한 아이디를 입력하세요." /> 
+							<label for="tel" class="form-label">연락처</label> 
+								<input type="text" id="getPw_tel" placeholder="등록한 연락처를 입력하세요." />
 							<div>
-								<input type="button" class="btn btn-primary mt-10 block w-full text-xl" id="btn_getPw"
-									value="비밀번호찾기" />
+								<input type="button" class="btn_getAccount" id="btn_getPw" value="비밀번호찾기" />
 							</div>
 							<span id="yourpw"></span>
 						</div>
-
+						
 						<div id="changepw" class="form-content">
-							<label for="id" class="form-label"></label> <input
-								type="password" id="pw" name="pw" placeholder="비밀번호" /> <label
-								for="pw" class="form-label">비밀번호 확인</label> <input
-								type="password" id="password" placeholder="비밀번호 확인" />
+							<label for="id" class="form-label"></label> 
+							<input type="password" id="pw" name="pw" placeholder="비밀번호" /> 
+							<label for="pw" class="form-label">비밀번호 확인</label> 
+							<input type="password" id="password" placeholder="비밀번호 확인" />
 							<div>
-								<input type="button" class="btn btn-primary mt-10 block w-full text-xl" id="btn_changePw"
-									value="비밀번호 재설정2" />
+								<input type="button" class="btn_getAccount" id="btn_changePw" value="비밀번호 재설정2" />
 							</div>
 						</div>
+						
+						
 
-
-
-					</div>
+					
 				</div>
 			</div>
 		</div>
 	</section>
-	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 	<%@include file="/WEB-INF/views/inc/footer.jsp"%>
 	<script>
 		document.addEventListener("DOMContentLoaded", function() {

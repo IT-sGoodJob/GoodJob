@@ -9,13 +9,17 @@
 <link rel="stylesheet"
 	href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 <style>
+
+
 </style>
 </head>
 
 <%@include file="/WEB-INF/views/inc/header.jsp"%>
 
 <body>
+
 	<!-- ./end floating assets -->
+
 	<section class="page-hero pt-16 pb-6">
 		<div class="container">
 			<div class="z-custom card" id="itvWriteQnA">
@@ -23,15 +27,13 @@
 					<div class="card-content">
 						<div class="px-4 text-center">
 							<h1 class="mt-3 gradiTitle">
-								<span
-									onclick="location.href='/good/user/recruit/listrecruit.do';">채용공고</span>
+								<span onclick="location.href='/good/user/recruit/listrecruit.do';">채용공고</span>
 							</h1>
 							<p class="recruit-list mt-6">채용이 진행 중인 공고를 확인하세요.</p>
 						</div>
 
 						<div>
-							<form id="searchForm" method="GET"
-								action="/good/user/recruit/listrecruit.do">
+							<form id="searchForm" method="GET" action="/good/user/recruit/listrecruit.do">
 
 								<input type="text" name="word" class="input" id="search-input"
 									placeholder="기업명으로 검색하세요.">
@@ -41,117 +43,178 @@
 									</span>
 								</button>
 							</form>
-							<button type="button" class="btn btnList w-full"
-								id="detail-search-btn">학력 / 경력 / 연봉 / 지역으로 상세조회하기</button>
+								<button type="button" class="btn btnList w-full"
+									id="detail-search-btn">학력 / 경력 / 연봉 / 지역 / 직무로 상세조회하기</button>
 						</div>
 						<div>
-							<form action="/good/user/recruit/listrecruit.do" method="GET">
-								<section
-									class="integration-single z-custom section pt-0 com-detail"
-									style="display: none;" id="detailSection">
+						<form action="/good/user/recruit/listrecruit.do" method="GET">
+							<section class="integration-single z-custom section pt-0 com-detail"
+								style="display: none;" id="detailSection">
 
-									<div class="container">
+								<div class="container">
+									<div class="justify-center">
+
 										<div class="justify-center">
 
-											<div class="justify-center">
-
-												<div class="mt-8 border-border py-10" id="userDetail">
-													<div>
-														<h6 class="text-left preferTitle">
-															<i class="fa-solid fa-user-graduate"></i> 학력 선택
-														</h6>
-														<select name="edu_seq">
-															<option value="0">학력무관</option>
-															<option value="1">고등학교졸업</option>
-															<option value="2">대학교(2,3년)</option>
-															<option value="3">대학교졸업(4년)</option>
-															<option value="4">석사졸업</option>
-															<option value="5">박사졸업</option>
-															<option value="6">고등학교졸업이상</option>
-															<option value="7">대학교(2,3년)이상</option>
-															<option value="8">대학교졸업(4년)이상</option>
-															<option value="9">석사졸업이상</option>
-														</select>
-													</div>
-													<div>
-														<h6 class="text-left preferTitle">
-															<i class="fa-solid fa-briefcase"></i> 경력 선택
-														</h6>
-														<input type="number" name="career" min="0" max="40"
-															step="1" placeholder="숫자만 입력(0 ~)" required>
-													</div>
-													<div>
-														<h6 class="text-left preferTitle">
-															<i class="fa-solid fa-hand-holding-dollar"></i> 희망연봉
-														</h6>
-														<select name="salary_seq">
-															<option value="0">전체</option>
-															<option value="9">2,600만원 이상</option>
-															<option value="10">2,800만원 이상</option>
-															<option value="11">3,000만원 이상</option>
-															<option value="12">3,200만원 이상</option>
-															<option value="13">3,400만원 이상</option>
-															<option value="14">3,600만원 이상</option>
-															<option value="15">3,800만원 이상</option>
-															<option value="16">4,000만원 이상</option>
-															<option value="17">5,000만원 이상</option>
-															<option value="18">6,000만원 이상</option>
-														</select>
-													</div>
-
+											<div class="mt-8 border-border py-10" id="userDetail">
+												<div>
+													<h6 class="text-left preferTitle">
+														<i class="fa-solid fa-user-graduate"></i> 학력 선택
+													</h6>
+													<select name="edu_seq">
+														<option value="0">학력무관</option>
+														<option value="1">고등학교졸업</option>
+														<option value="2">대학교(2,3년)</option>
+														<option value="3">대학교졸업(4년)</option>
+														<option value="4">석사졸업</option>
+														<option value="5">박사졸업</option>
+														<option value="6">고등학교졸업이상</option>
+														<option value="7">대학교(2,3년)이상</option>
+														<option value="8">대학교졸업(4년)이상</option>
+														<option value="9">석사졸업이상</option>
+													</select>
 												</div>
-
-												<!-- 선호근무지역 Start -->
-												<div class="border-border">
-													<h5 class="text-left preferTitle">
-														<i class="fa-solid fa-location-dot"></i> 지역으로 조회하기(최대 3건)
-													</h5>
-													<div class="optionRegion rcrt-list">
-														<div class="region-list">
-															<ul>
-																<li onclick="showLocations('서울')">서울</li>
-																<li onclick="showLocations('경기')">경기</li>
-																<li onclick="showLocations('인천')">인천</li>
-																<li onclick="showLocations('부산')">부산</li>
-																<li onclick="showLocations('대구')">대구</li>
-																<li onclick="showLocations('광주')">광주</li>
-																<li onclick="showLocations('대전')">대전</li>
-																<li onclick="showLocations('울산')">울산</li>
-																<li onclick="showLocations('세종')">세종</li>
-																<li onclick="showLocations('강원')">강원</li>
-																<li onclick="showLocations('경남')">경남</li>
-																<li onclick="showLocations('경북')">경북</li>
-																<li onclick="showLocations('전남')">전남</li>
-																<li onclick="showLocations('전북')">전북</li>
-																<li onclick="showLocations('충남')">충남</li>
-																<li onclick="showLocations('충북')">충북</li>
-																<li onclick="showLocations('제주')">제주</li>
-															</ul>
-														</div>
-
-														<div class="location-list">
-															<div id="locationCheckboxes"></div>
-
-														</div>
-														<div class="tag-group">
-															<span id="lctag"> </span> <span class="clear"
-																onclick="clearLocations()"><i
-																class="fa-solid fa-rotate-right"></i> 지역 초기화</span>
-														</div>
-													</div>
-
+												<div>
+													<h6 class="text-left preferTitle">
+														<i class="fa-solid fa-briefcase"></i> 경력 선택
+													</h6>
+													<input type="number" name="career" min="0" max="40" step="1"
+														placeholder="숫자만 입력(0 ~)" required>
 												</div>
-												<!-- 선호근무지역 End -->
-												<div class="px-4 text-center">
-													<button class="btn" type="submit" id="btn-detail">선택
-														조건으로 채용공고 조회하기</button>
+												<div>
+													<h6 class="text-left preferTitle">
+														<i class="fa-solid fa-hand-holding-dollar"></i> 희망연봉
+													</h6>
+													<select name="salary_seq">
+														<option value="0">전체</option>
+														<option value="9">2,600만원 이상</option>
+														<option value="10">2,800만원 이상</option>
+														<option value="11">3,000만원 이상</option>
+														<option value="12">3,200만원 이상</option>
+														<option value="13">3,400만원 이상</option>
+														<option value="14">3,600만원 이상</option>
+														<option value="15">3,800만원 이상</option>
+														<option value="16">4,000만원 이상</option>
+														<option value="17">5,000만원 이상</option>
+														<option value="18">6,000만원 이상</option>
+													</select>
 												</div>
 
 											</div>
 
+											<!-- 선호근무지역 Start -->
+											<div class="border-border">
+												<h5 class="text-left preferTitle">
+													<i class="fa-solid fa-location-dot"></i> 지역으로 조회하기(최대 3건)
+												</h5>
+												<div class="optionRegion rcrt-list">
+													<div class="region-list">
+														<ul>
+															<li onclick="showLocations('서울')">서울</li>
+															<li onclick="showLocations('경기')">경기</li>
+															<li onclick="showLocations('인천')">인천</li>
+															<li onclick="showLocations('부산')">부산</li>
+															<li onclick="showLocations('대구')">대구</li>
+															<li onclick="showLocations('광주')">광주</li>
+															<li onclick="showLocations('대전')">대전</li>
+															<li onclick="showLocations('울산')">울산</li>
+															<li onclick="showLocations('세종')">세종</li>
+															<li onclick="showLocations('강원')">강원</li>
+															<li onclick="showLocations('경남')">경남</li>
+															<li onclick="showLocations('경북')">경북</li>
+															<li onclick="showLocations('전남')">전남</li>
+															<li onclick="showLocations('전북')">전북</li>
+															<li onclick="showLocations('충남')">충남</li>
+															<li onclick="showLocations('충북')">충북</li>
+															<li onclick="showLocations('제주')">제주</li>
+														</ul>
+													</div>
+  
+													<div class="location-list">
+														<div id="locationCheckboxes"></div>
+
+													</div>
+													<div class="tag-group">
+														<span id="lctag">
+															
+														
+														 </span> <span class="clear"
+															onclick="clearLocations()"><i
+															class="fa-solid fa-rotate-right"></i> 지역 초기화</span>
+													</div>
+												</div>
+
+											</div>
+											<!-- 선호근무지역 End -->
+											<!-- 선호직무 -->
+											<div data-tab-group="service-tab" class="">
+												<div class="text-center">
+													<h5 class="text-left">🖤선호직무</h5>
+													<div class="optionJob mt-4">
+														<dl class="row_item">
+															<dt class="category-list">
+																<h6>
+																	직무·직업<span class="toggle-button"
+																		onclick="toggleTagList(event)">+</span>
+																</h6>
+															</dt>
+															<dd class="tag-group">
+																<input type="checkbox" id="tag1" value="데이터엔지니어">
+																<label for="tag1">데이터엔지니어</label> <input type="checkbox"
+																	id="tag2" value="프론트엔드"> <label for="tag2">프론트엔드</label>
+															</dd>
+														</dl>
+
+														<dl class="row_item">
+															<dt class="category-list">
+																<h6>
+																	전문분야<span class="toggle-button"
+																		onclick="toggleTagList(event)">+</span>
+																</h6>
+															</dt>
+															<dd class="tag-group">
+																<input type="checkbox" id="tag3" value="자바"> <label
+																	for="tag3">자바</label> <input type="checkbox" id="tag4"
+																	value="AWS"> <label for="tag4">AWS</label> <input
+																	type="checkbox" id="tag5" value="Python"> <label
+																	for="tag5">Python</label>
+															</dd>
+														</dl>
+
+														<dl class="row_item">
+															<dt class="category-list">
+																<h6>
+																	기술스택<span class="toggle-button"
+																		onclick="toggleTagList(event)">+</span>
+																</h6>
+															</dt>
+															<dd class="tag-group">
+																<input type="checkbox" id="tag6" value="React">
+																<label for="tag6">React</label> <input type="checkbox"
+																	id="tag7" value="웹개발"> <label for="tag7">웹개발</label>
+																<input type="checkbox" id="tag8" value="ABAP"> <label
+																	for="tag8">ABAP</label>
+															</dd>
+														</dl>
+													</div>
+													<div class="tag-group">
+														<span id="lctag"> </span> <span class="clear"
+															onclick="clearLocations()"><i
+															class="fa-solid fa-rotate-right"></i> 직무 초기화</span>
+													</div>
+												</div>
+
+												<div class="px-4 text-center">
+													<button class="btn" type="submit" id="btn-detail">선택
+														조건으로 채용공고 조회하기</button>
+												</div>
+											</div>
+
 										</div>
+
 									</div>
-								</section>
+								</div>
+							</section>
 							</form>
 						</div>
 					</div>
@@ -169,91 +232,83 @@
 									조회된 채용공고는 총 <span id="list-cnt">${totalCount}</span>건입니다.
 								</p>
 							</div>
+						
+								<div class="InpBox">
+								    <select class="sorting" name="sort" id="sort">
+								        <option value="latest" ${map.sort == 'latest' ? 'selected' : ''}>최신순</option>
+								        <option value="oldest" ${map.sort == 'oldest' ? 'selected' : ''}>마감순</option>
+								    </select>
+								</div>
 
-							<div class="InpBox">
-								<select class="sorting" name="sort" id="sort">
-									<option value="latest"
-										${map.sort == 'latest' ? 'selected' : ''}>최신순</option>
-									<option value="oldest"
-										${map.sort == 'oldest' ? 'selected' : ''}>마감순</option>
-								</select>
-							</div>
-
-
+					
 						</div>
 
 
 						<div class="list_body">
 							<div id="rec-48103333" class="list_item">
-
-								<!-- 채용공고start -->
-								<c:forEach items="${list}" var="dto">
-									<div
-										class="box_item row mx-0 rounded-[20px] bg-white px-10 shadow-lg">
-										<div class="com-title">
-											<div class="recruit-present-info">
-												<div class="com-name">
-													<span>${dto.cp_name }</span>
-												</div>
-												<div class="col support_info">
-													<p class="support_detail">
-														<span class="date">~ ${dto.enddate}</span>
-													</p>
-												</div>
+							
+							<!-- 채용공고start -->
+							<c:forEach items="${list}" var="dto">
+								<div class="box_item row mx-0 rounded-[20px] bg-white px-10 shadow-lg">
+									<div class="com-title">
+										<div class="recruit-present-info">
+											<div class="com-name">
+												<span>${dto.cp_name }</span>
 											</div>
-											<div class="col notification_info">
-												<div class="recruit-list job_tit">
-													<a class="str_tit_title new" id="rec_link_48103333"
-														onclick="" href="${dto.rcrt_link}" target="_blank"
-														onmousedown=""> <span><h4>${dto.rcrt_name}</h4></span></a>
-												</div>
-												<div class="job_meta" id="recruit_job_meta">
-
-													<c:forEach items="${dto.job_name }" var="item">
-														<span class="job-keyword">${item}</span>
-													</c:forEach>
-
-
-												</div>
+											<div class="col support_info">
+												<p class="support_detail">
+													<span class="date">~ ${dto.enddate}</span>
+												</p>
 											</div>
 										</div>
-										<div class="com-info">
-											<div class="col recruit_info">
-												<ul>
-													<li>
-														<p class="work_place">${dto.cp_address}</p>
-													</li>
-													<li>
-														<p class="career">
-
-															<c:if
-																test="${dto.min_career == 0 && dto.max_career == 0}">
-																<p class="career">신입</p>
-															</c:if>
-															<c:if
-																test="${dto.min_career != 0 && dto.max_career == 0}">
-																<p class="career">경력 ${dto.min_career}년 이상</p>
-															</c:if>
-															<c:if
-																test="${dto.min_career != 0 && dto.max_career != 0}">
-																<p class="career">경력 ${dto.min_career}년 ~
-																	${dto.max_career}년</p>
-															</c:if>
-
-														</p>
-													</li>
-													<li>
-														<p class="education">${dto.edu_type}</p>
-													</li>
-													<li>
-														<p class="salary">${dto.salary_type}</p>
-													</li>
-												</ul>
+										<div class="col notification_info">
+											<div class="recruit-list job_tit">
+												<a class="str_tit_title new" id="rec_link_48103333"
+													onclick="" href="${dto.rcrt_link}" target="_blank" onmousedown=""> <span><h4>${dto.rcrt_name}</h4></span></a>
+											</div>
+											<div class="job_meta" id="recruit_job_meta">
+											
+											<c:forEach items="${dto.job_name }" var="item">
+												<span class="job-keyword">${item}</span>
+											</c:forEach>
+													
+													
 											</div>
 										</div>
 									</div>
-								</c:forEach>
+									<div class="com-info">
+										<div class="col recruit_info">
+											<ul>
+												<li>
+													<p class="work_place">${dto.cp_address}</p>
+												</li>
+												<li>
+													<p class="career">
+													
+													<c:if test="${dto.min_career == 0 && dto.max_career == 0}">
+													    <p class="career">신입</p>
+													</c:if>
+													<c:if test="${dto.min_career != 0 && dto.max_career == 0}">
+													    <p class="career">경력 ${dto.min_career}년 이상</p>
+													</c:if>
+													<c:if test="${dto.min_career != 0 && dto.max_career != 0}">
+													    <p class="career">경력 ${dto.min_career}년 ~ ${dto.max_career}년</p>
+													</c:if>
 
+													</p>
+												</li>
+												<li>
+													<p class="education">${dto.edu_type}</p>
+												</li>
+												<li>
+													<p class="salary">${dto.salary_type}</p>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								</c:forEach>
+							
 								<!-- 채용공고end -->
 							</div>
 						</div>
@@ -263,18 +318,18 @@
 
 
 		</div>
-
-
+	
+	
 		<nav class="PageBox z-custom" aria-label="Page navigation example">
 			<ul class="pagination z-custom">${pagebar}
 			</ul>
 		</nav>
 
-
+				
 	</section>
-	<%@include file="/WEB-INF/views/inc/footer.jsp"%>
-
-
+		<%@include file="/WEB-INF/views/inc/footer.jsp"%>
+		
+		
 	<script>
 	
 	<c:if test="${map.search == 'y'}">

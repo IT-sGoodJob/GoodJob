@@ -2616,9 +2616,6 @@ input#nav-toggle:checked ~ #nav-menu {
 .mr-3 {
   margin-right: 0.75rem;
 }
-.mr-4 {
-  margin-right: 1rem;
-}
 .mr-8 {
   margin-right: 2rem;
 }
@@ -2744,9 +2741,6 @@ input#nav-toggle:checked ~ #nav-menu {
 }
 .min-h-\[105px\] {
   min-height: 105px;
-}
-.min-h-\[600px\] {
-  min-height: 600px;
 }
 .w-14 {
   width: 3.5rem;
@@ -2937,10 +2931,6 @@ input#nav-toggle:checked ~ #nav-menu {
 .border-y {
   border-top-width: 1px;
   border-bottom-width: 1px;
-}
-.border-x {
-  border-left-width: 1px;
-  border-right-width: 1px;
 }
 .border-b {
   border-bottom-width: 1px;
@@ -3153,9 +3143,6 @@ input#nav-toggle:checked ~ #nav-menu {
 }
 .pb-\[75px\] {
   padding-bottom: 75px;
-}
-.pl-4 {
-  padding-left: 1rem;
 }
 .pl-5 {
   padding-left: 1.25rem;
